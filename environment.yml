@@ -1,0 +1,21 @@
+name: leaf
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - numpy==2.2.5
+      - pandas==2.3.3
+      - scikit-learn==1.7.2
+      - xgboost==3.2.0
+      - tabpfn==7.1.1
+      - torch==2.11.0
+      - transformers==5.4.0
+      - openai==2.32.0
+      - openml>=0.15,<0.16
+      - ucimlrepo>=0.0.7,<0.1
+      - kaggle>=1.7,<3
+      - openpyxl>=3.1,<4
+      - xlrd>=2,<3
+      - accelerate>=1,<2

@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.."
+python -m leaf.cli \
+  --task regression \
+  --datasets cpu_small diamonds forest-fires housing bike cultivars_regression infrared_thermography_temperature wine insurance \
+  --data-root "${DATA_ROOT:-data}" \
+  --output-root "${OUTPUT_ROOT:-outputs}" \
+  --shots 4 8 16 --seeds 0 1 2 3 4 5 6 7 8 9 \
+  --llm-backend "${LLM_BACKEND:-api}" \
+  --resume "$@"
